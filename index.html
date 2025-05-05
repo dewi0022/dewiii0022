@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Praktikum 3 - Pemrograman WEB</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+    header {
+      background-color: #cce5f5;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #945966;
+      text-align: center;
+      padding: 10px;
+    }
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+      font-weight: bold;
+      cursor: pointer;
+    }
+    main {
+      display: flex;
+    }
+    article {
+      flex: 3;
+      background-color: #ab7fb8;
+      padding: 20px;
+    }
+    aside {
+      flex: 1;
+      background-color: #6f66aa;
+      padding: 20px;
+    }
+    aside ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    aside ul li a {
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+    }
+    .content-section {
+      display: none;
+    }
+    .active {
+      display: block;
+    }
+    .gallery img {
+      width: 100%;
+      max-width: 200px;
+      margin: 10px;
+    }
+  </style>
+  <script>
+    function showSection(id) {
+      var sections = document.getElementsByClassName('content-section');
+      for (var i = 0; i < sections.length; i++) {
+        sections[i].style.display = 'none';
+      }
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
+</head>
+<body>
+
+  <header>
+    <h2>Praktikum 3 - Pemrograman WEB</h2>
+    <p>Website Sederhana</p>
+  </header>
+
+  <nav>
+    <a onclick="showSection('home')">HOME</a>
+    <a onclick="showSection('profil')">PROFIL</a>
+    <a onclick="showSection('tentang')">TENTANG SAYA</a>
+    <a onclick="showSection('gallery')">GALLERY</a>
+    <a onclick="showSection('kontak')">KONTAK SAYA</a>
+  </nav>
+
+  <main>
+    <article>
+      <div id="home" class="content-section active">
+        <h3>Selamat datang!</h3>
+        <p>Di Website Dewi Anggreayani.</p>
+      </div>
+
+      <div id="profil" class="content-section">
+        <h3>Profil</h3>
+        <p>
+          Nama: Dewi Anggreayani<br>
+          Umur: 21 tahun<br>
+          Tempat Lahir: Kota Bekasi<br>
+          Tanggal Lahir: 18 Maret 2004
+          Alamat: Jl.Mesjid Al-Ikhsan Rt002/Rw003<br>
+          Pendidikan: Mahasiswa Universitas Darma Persada<br>
+          Jurusan: Sistem Informasi<br>
+          Pengalaman Kerja: 3 tahun<br>
+        </p>
+      </div>
+
+      <div id="tentang" class="content-section">
+        <h3>Tentang Saya</h3>
+        <p>
+          Perkenalkan, nama saya Dewi Anggreayani, saya berusia 21 tahun dan berasal dari Kota Bekasi. Sejak duduk di bangku SMK, saya sudah terbiasa menjalani keseharian yang padat—menyelesaikan pendidikan sambil bekerja. Kini, saya telah memiliki pengalaman kerja lebih dari 3 tahun, sebuah perjalanan yang mengasah kedisiplinan, tanggung jawab, dan semangat belajar saya.
+          Semasa sekolah, saya aktif mengikuti berbagai kegiatan organisasi, yang membantu saya mengembangkan kemampuan komunikasi, kepemimpinan, dan kerja tim. Saat ini saya sedang melanjutkan pendidikan di Universitas Darma Persada, Jakarta, mengambil program studi Sistem Informasi.
+          Saya memiliki minat besar di dunia teknologi dan berkomitmen untuk terus memperdalam ilmu pemrograman. Tujuan saya adalah dapat bekerja secara profesional di bidang yang saya tekuni, serta terus berkembang seiring kemajuan teknologi.
+        </p>
+      </div>
+
+      <div id="gallery" class="content-section gallery">
+        <h3>Galeri Sertifikat</h3>
+        <img src="bjb.jpg" alt="Sertifikat 1">
+        <img src="mustika.jpg" alt="Sertifikat 2">
+        <img src="smp.jpg" alt="Sertifikat 3">
+        <!-- Ganti nama file gambar sesuai yang kamu punya -->
+      </div>
+
+      <div id="kontak" class="content-section">
+        <h3>Kontak Saya</h3>
+        <p>WhatsApp: 088809959457</p>
+        <p>Instagram: @aanggrynnii_</p>
+      </div>
+    </article>
+
+    <aside>
+      <h4>Pemberitahuan</h4>
+      <ul>
+        <li><a href="#">GitHub Pages menyediakan layanan hosting gratis yang sangat cocok untuk keperluan pembelajaran dan tugas-tugas sederhana seperti ini. Tidak ada biaya berlangganan yang diperlukan.</a></li>
+      </ul>
+    </aside>
+  </main>
+
+</body>
+</html>
